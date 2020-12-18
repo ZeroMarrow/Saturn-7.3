@@ -1,0 +1,53 @@
+﻿<Window x:Class="Saturn.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Saturn"
+        mc:Ignorable="d"
+        Title="Window1" Height="450" Width="800">
+    <Grid Background="#FF3E739E">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="164*"/>
+            <RowDefinition Height="97*"/>
+            <RowDefinition Height="93*"/>
+            <RowDefinition Height="68*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0.6*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Vertical"
+                    HorizontalAlignment="Center" VerticalAlignment="Center" Height="158" Margin="98,-4,97,10" Width="300">
+            <Label Content="Марка автомобиля"/>
+            <TextBox x:Name="Mark" Width="300" Background="Black"/>
+            <Label Content="Производитель"/>
+            <TextBox x:Name="Mark1" Width="300" Background="Black"/>
+        </StackPanel>
+        <StackPanel Grid.Column="0" Orientation="Vertical"
+                    HorizontalAlignment="Center" VerticalAlignment="Center" Height="50" Margin="98,23,97,24" Width="300" Grid.Row="1">
+            <Label Content="Дата выпуска"/>
+            <DatePicker x:Name="DateStart" Width="300" Background="Black"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Horizontal"
+                    HorizontalAlignment="Center" VerticalAlignment="Center" Height="48" Margin="102,23,103,22" Width="290">
+            <StackPanel Orientation="Vertical">
+                <Label Content="Дата регистрации"/>
+                <DatePicker x:Name="DateReg" Width="297" Background="Black"/>
+            </StackPanel>
+        </StackPanel>
+        <GroupBox Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" Header="Тип">
+            <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <RadioButton Content="Седан" GroupName="POL" x:Name="Sedan"/>
+                <RadioButton Content="Гибрид" GroupName="POL" x:Name="Gibrid"/>
+
+            </StackPanel>
+        </GroupBox>
+        <CheckBox x:Name="BIFU" Content="Б/У" Grid.Row="2" Grid.Column="1" Margin="80 40 10 10 "/>
+        <StackPanel Grid.Row="3" Grid.ColumnSpan="2" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Height="50" Margin="291,8,291,10" Width="210">
+            <Button Content="OK" Width="100" Height="50" Click="Button_Click"/>
+            <Button Content="Cancel" Width="100" Height="50" Margin="10 0 0 0" Click="Button_Click_1"/>
+        </StackPanel>
+    </Grid>
+</Window>
